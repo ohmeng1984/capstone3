@@ -5,7 +5,10 @@
                     	<div class="row">
                     		<div class="col-md-9">
                     			{!!$comment->body!!}
+<<<<<<< HEAD
                           <img style="width:30%"  src="/storage/cover_images/{{$comment->cover_image}}">
+=======
+>>>>>>> 1d9712a270dc9d8b9619543879fcb74a59a86676
                     		</div>
                     		<div class="col-md-3">
                     			@if(!is_null($thread->solution))

@@ -15,18 +15,27 @@ class CommentController extends Controller
         //Validate
         $this->validate($request, [
                 'body' => 'required',
+<<<<<<< HEAD
                 'cover_image' => 'image|nullable|max:1999'
         ] );
 
 
 
+=======
+        ] );
+
+>>>>>>> 1d9712a270dc9d8b9619543879fcb74a59a86676
 /*        $comment=new Comment();
         $comment->body=$request->body;
         $comment->user_id=auth()->user()->id;
 
         $thread->comments()->save($comment);*/
 
+<<<<<<< HEAD
         $thread->addComment($request);
+=======
+        $thread->addComment($request->body);
+>>>>>>> 1d9712a270dc9d8b9619543879fcb74a59a86676
 
         $thread->user->notify(new RepliedToThread($thread));
 
@@ -38,7 +47,10 @@ class CommentController extends Controller
         //Validate
         $this->validate($request, [
                 'body' => 'required',
+<<<<<<< HEAD
                 'cover_image' => 'image|nullable|max:1999'
+=======
+>>>>>>> 1d9712a270dc9d8b9619543879fcb74a59a86676
         ] );
 
 /*        $reply=new Comment();
@@ -47,7 +59,11 @@ class CommentController extends Controller
 
         $comment->comments()->save($reply);*/
 
+<<<<<<< HEAD
         $comment->addComment($request);
+=======
+        $comment->addComment($request->body);
+>>>>>>> 1d9712a270dc9d8b9619543879fcb74a59a86676
 
         return back()->with('success', 'Reply Added');
     }

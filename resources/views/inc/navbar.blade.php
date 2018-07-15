@@ -12,6 +12,7 @@
     <li class="nav-item">
       <a class="nav-link" href="/">Home</a>
     </li>
+<<<<<<< HEAD
     @if(Auth::guest()||Auth::user()->role=='user')
 {{--       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="/forum" id="navbardrop" data-toggle="dropdown">
@@ -41,6 +42,29 @@
         <a class="nav-link" href="{{ route('adminpage') }}">Admin Dashboard</a>
       </li>
     @endif
+=======
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="/forum" id="navbardrop" data-toggle="dropdown">
+        Forum
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="/forum">View Forums</a>
+        <a class="dropdown-item" href="#">Search Forums</a>
+        <a class="dropdown-item" href="#">New Topics</a>
+        <a class="dropdown-item" href="#">Sticky Threads</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/about">About</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/whatsnew">What's New</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/groups">Groups</a>
+    </li>    
+
+>>>>>>> 1d9712a270dc9d8b9619543879fcb74a59a86676
     <!-- Dropdown -->
 
   </ul>

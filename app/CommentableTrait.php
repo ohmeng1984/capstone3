@@ -14,6 +14,7 @@ trait CommentableTrait
 
     public function addComment($body)
     {
+<<<<<<< HEAD
         //Handle File Upload
         if($body->hasFile('cover_image')){
             //Get filename with the extension
@@ -34,6 +35,10 @@ trait CommentableTrait
         $comment=new Comment();
         $comment->body=$body->body;
         $comment->cover_image=$fileNameToStore;
+=======
+        $comment=new Comment();
+        $comment->body=$body;
+>>>>>>> 1d9712a270dc9d8b9619543879fcb74a59a86676
         $comment->user_id=auth()->user()->id;
 
         $this->comments()->save($comment);

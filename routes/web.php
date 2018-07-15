@@ -36,6 +36,7 @@ Route::get('/markAsRead', function(){
 	auth()->user()->unreadNotifications->markAsRead();
 });
 
+<<<<<<< HEAD
 Route::get('admin/routes', 'HomeController@admin')->middleware('admin')->name('adminpage');
 Route::get('admin/routes/users', 'HomeController@viewusers')->middleware('admin')->name('viewusers');
 Route::delete('admin/routes/users/{id}', 'HomeController@destroy')->name('destroyuser');
@@ -46,3 +47,5 @@ Route::get('admin/routes/topic/', 'HomeController@addtopic')->name('addtopic');
 Route::delete('admin/routes/topic/{id}', 'HomeController@deletetopic')->name('deletetopic');
 Route::delete('admin/routes/threads/{id}', 'HomeController@destroythread')->name('destroythread');
 Route::delete('admin/routes/comments/{id}', 'HomeController@destroycomment')->name('destroycomment');
+=======
+>>>>>>> 1d9712a270dc9d8b9619543879fcb74a59a86676

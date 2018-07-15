@@ -43,6 +43,7 @@ class RepliedToThread extends Notification
      */
     public function toDatabase($notifiable)
     {
+<<<<<<< HEAD
         if (!auth()->user()) {
             return[
             'thread'=>$this->thread,
@@ -66,6 +67,14 @@ class RepliedToThread extends Notification
             'user'=>auth()->user()
             }
         ];*/
+=======
+        return[
+            /*'repliedTime'=>Carbon::now()*/
+
+            'thread'=>$this->thread,
+            'user'=>auth()->user()
+        ];
+>>>>>>> 1d9712a270dc9d8b9619543879fcb74a59a86676
     }
 
     /**

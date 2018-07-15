@@ -6,10 +6,14 @@
                         @foreach($comment->comments as $reply)
 
                 <div class="card">
+<<<<<<< HEAD
                     <div class="card-body">
                       {!!$reply->body!!}
                       <img style="width:30%"  src="/storage/cover_images/{{$reply->cover_image}}">
                     </div>
+=======
+                    <div class="card-body">{!!$reply->body!!}</div>
+>>>>>>> 1d9712a270dc9d8b9619543879fcb74a59a86676
                     <div class="card-footer">by {{$reply->user->name}}
                         @if(!Auth::guest())
                         @if(Auth::user()->id===$reply->user_id)
@@ -66,14 +70,22 @@
                 {{-- Reply Form --}}
 
                 <div class="comment-form">
+<<<<<<< HEAD
                     {!! Form::open(['action' => ['CommentController@addReplyComment', $comment->id], 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
+=======
+                    {!! Form::open(['action' => ['CommentController@addReplyComment', $comment->id], 'method' => 'POST']) !!}
+>>>>>>> 1d9712a270dc9d8b9619543879fcb74a59a86676
                         <div class="form-group">
                         <h4>Add Reply:</h4>
                            {{Form::textarea('body', '', ['class' => 'form-control', 'placeholder' => 'Reply'] )}}
                         </div>
+<<<<<<< HEAD
                          <div class="form-group">
                             {{Form::file('cover_image')}}
                         </div>
+=======
+ 
+>>>>>>> 1d9712a270dc9d8b9619543879fcb74a59a86676
                         {{Form::submit('Post Reply', ['class' => 'btn btn-primary'])}}
                     {!! Form::close() !!}
 

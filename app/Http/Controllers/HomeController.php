@@ -3,12 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+<<<<<<< HEAD
 use App\Http\Controllers\Controller;
 use App\User;
 use App\Tag;
 use Illuminate\Support\Facades\DB;
 use App\Thread;
 use App\Comment;
+=======
+use App\User;
+>>>>>>> 1d9712a270dc9d8b9619543879fcb74a59a86676
 class HomeController extends Controller
 {
     /**
@@ -18,7 +22,11 @@ class HomeController extends Controller
      */
     public function __construct()
     {
+<<<<<<< HEAD
         $this->middleware('admin');
+=======
+        $this->middleware('auth');
+>>>>>>> 1d9712a270dc9d8b9619543879fcb74a59a86676
     }
 
     /**
@@ -26,6 +34,7 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+<<<<<<< HEAD
     public function admin()
     {
         $tags=Tag::all();
@@ -184,5 +193,10 @@ class HomeController extends Controller
         $comment = Comment::find($id);
         $comment->delete();
         return redirect('admin/routes')->with('success', 'Comment Deleted');
+=======
+    public function index()
+    {
+        return redirect('/');
+>>>>>>> 1d9712a270dc9d8b9619543879fcb74a59a86676
     }
 }

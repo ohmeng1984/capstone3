@@ -52,7 +52,10 @@
         @include('posts.comment-list')
 
         @include('posts.reply-list')
+<<<<<<< HEAD
         
+=======
+>>>>>>> 1d9712a270dc9d8b9619543879fcb74a59a86676
     @endforeach
 
 
@@ -60,11 +63,16 @@
                 @if(!Auth::guest())
                 <br>
                 <div class="comment-form">
+<<<<<<< HEAD
                     {!! Form::open(['action' => ['CommentController@addThreadComment', $thread->id], 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
+=======
+                    {!! Form::open(['action' => ['CommentController@addThreadComment', $thread->id], 'method' => 'POST']) !!}
+>>>>>>> 1d9712a270dc9d8b9619543879fcb74a59a86676
                         <div class="form-group">
                         <h4>Add Comment:</h4>
                            {{Form::textarea('body', '', ['class' => 'form-control', 'placeholder' => 'Comment'] )}}
                         </div>
+<<<<<<< HEAD
 
                         <div class="form-group">
                             {{Form::file('cover_image')}}
@@ -73,6 +81,8 @@
 {{--                         <div class="form-group">
                             {{Form::date('name', \Carbon\Carbon::now())}}
                         </div> --}}
+=======
+>>>>>>> 1d9712a270dc9d8b9619543879fcb74a59a86676
  
                         {{Form::submit('Post Comment', ['class' => 'btn btn-primary'])}}
                     {!! Form::close() !!}

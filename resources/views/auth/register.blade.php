@@ -39,6 +39,7 @@
                             </div>
                         </div>
 
+<<<<<<< HEAD
                     @if (Auth::user('role', 'admin'))
                         <div class="form-group{{ $errors->has('role') ? ' has-error' : '' }}">
                             <label for="role" class="col-md-4 control-label">Role</label>
@@ -67,6 +68,8 @@
                     @endif
 
 
+=======
+>>>>>>> 1d9712a270dc9d8b9619543879fcb74a59a86676
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="col-md-4 control-label">Password</label>
 

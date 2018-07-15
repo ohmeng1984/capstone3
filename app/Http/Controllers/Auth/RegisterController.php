@@ -27,6 +27,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
+<<<<<<< HEAD
 
 //      redirectTo property
 //    protected $redirectTo = '/';
@@ -38,6 +39,10 @@ class RegisterController extends Controller
         return '/login';
         }
     }
+=======
+    protected $redirectTo = '/';
+
+>>>>>>> 1d9712a270dc9d8b9619543879fcb74a59a86676
     /**
      * Create a new controller instance.
      *
@@ -45,8 +50,12 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
+<<<<<<< HEAD
 
         $this->middleware('guest'||'admin');
+=======
+        $this->middleware('guest');
+>>>>>>> 1d9712a270dc9d8b9619543879fcb74a59a86676
     }
 
     /**
@@ -61,7 +70,10 @@ class RegisterController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
+<<<<<<< HEAD
             'role' => 'required|string|max:10'
+=======
+>>>>>>> 1d9712a270dc9d8b9619543879fcb74a59a86676
         ]);
     }
 
@@ -77,7 +89,10 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+<<<<<<< HEAD
             'role' => $data['role']
+=======
+>>>>>>> 1d9712a270dc9d8b9619543879fcb74a59a86676
         ]);
     }
 }
